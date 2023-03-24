@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+     <title>Registration Form</title>
+    <style>
+<!--         h2{background-color:aqua;}-->
+         td,tr{text-align:middle;}
+    </style>
+</head>
+<body style="background-color:DarkSeaGreen;background-image:url('5.jpg')">
+<h2 style=text-align:center;> REGISTRATION FORM</h2>
+<form action="register" method ="post">
+    {% csrf_token%}
+  <table>
+
+        <tr>
+            <td>
+                username:
+            </td>
+            <td>
+                <input text="text" placeholder="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                First name:
+            </td>
+            <td>
+                <input text="text" placeholder="First name">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+
+                Last name:
+            </td>
+            <td>
+                <input text="text" placeholder="Last name">
+            </td>
+        </tr>
+       <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input text="emial" placeholder="****@gmail.com">
+            </td>
+        </tr>
+      <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input text="password" placeholder="password">
+            </td>
+        </tr>
+      <tr>
+            <td>
+                Confirm Password:
+            </td>
+            <td>
+                <input text="confirm Password" placeholder="confirm Password">
+            </td>
+        </tr>
+       <tr>
+        <td>
+            <input type="Submit" value="Submit">
+            <input type="Reset" value="Reset">
+        </td>
+        </tr>
+  </table>
+<!--    <input type="text" name="username" placeholder="Enter your Username"><br>-->
+<!--    <input type="text" name="first_name" placeholder="Enter your First name"><br>-->
+<!--    <input type="text" name="last_name" placeholder="Enter your last name"><br>-->
+<!--     <input type="email" name="email" placeholder="Enter your email address"><br>-->
+<!--     <input type="password" name="password" placeholder="Enter your password"><br>-->
+<!--     <input type="password" name="password1" placeholder="Confirm your password"><br>-->
+<!--    <input type="submit">-->
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
